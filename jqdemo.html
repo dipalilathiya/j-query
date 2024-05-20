@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="jqfile.js"></script>
+<body>
+    <h1>hello</h1>
+    <h1 id="demo">HELLO</h1>
+    <p class="test"></p>
+    <p>GOOD</p>
+    <h2 class="test"></h2>
+    <h1>wel</h1>
+    <h1>wel</h1>
+    <h1>wel</h1>
+    <h1>wel</h1>
+
+    <h3>HELLO HOW ARE YOU?</h3>
+    <button id="btn1" >click</button>
+    <button id="btn">stop</button>
+
+    <h4>GOOD WEL</h4>
+
+    <script>
+        $(document).ready(function(){
+            console.log("WEL");
+            $("h1").css("color","red")
+            $("#demo").css({"color":"green","background-color":"pink"})
+            $("h2.test").text("WEL COME").css("color","red")
+            $("h1:even").css("color","blue");
+        })
+
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("h3").css("color","red")
+            })
+            $("h4").click(function(){
+                $(this).css("color","green")
+            })
+            $("#btn").on({
+                click:(function(){
+                    $("h3").css("color","green")
+            })})
+                
+        })
+
+    </script>
+</body>
+</html>
