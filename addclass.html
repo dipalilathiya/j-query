@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jqfile.js"></script>
+</head>
+<style>
+    .box1{
+        width: 400px;
+        height: 400px;
+        /* background-color: thistle; */
+        border: 2px solid black;
+    }
+    .box2{
+        background-color: thistle;
+        border: 2px solid palevioletred;
+    }
+</style>
+<button id="btn">click</button>
+<div class="box1"></div>
+<body>
+    <script>
+      $(document).ready(function(){
+        $("#btn").click(function(){
+            // $("div").addClass("box2")
+            // $("div").removeClass("box1")
+            $("div").toggleClass("box2")
+            $("div").append("HELLO<br>")
+            var x=$("div").width()
+            alert(x)
+            // $("div").fadeToggle("HELLO")
+        })
+      })
+    </script>       
+</body>
+</html> 
